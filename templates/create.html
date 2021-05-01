@@ -1,0 +1,28 @@
+{%extends 'template.html'%}
+
+{% block title %}
+New Note
+{% endblock %}
+
+{% block main %}
+
+<form method="POST">
+    {{ createForm.hidden_tag() }}
+    <p>
+        {{createForm.course_id.label}}
+        {{createForm.course_id()}}
+        <br>
+        {{createForm.course.label}}
+        {{createForm.course()}}
+        <br>
+        {{createForm.title.label}}
+        {{createForm.title()}}
+        <br>
+        {{createForm.notes.label}}
+        {{createForm.notes()}}
+    </p>
+    <p>
+        {{createForm.submitnote()}}
+    </p>
+</form>
+{% endblock %}

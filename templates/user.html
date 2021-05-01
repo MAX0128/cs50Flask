@@ -1,0 +1,53 @@
+{% extends 'template.html'%}
+
+{% block title%}
+Notelist
+{% endblock %}
+
+{% block main %}
+
+<div>
+
+    <h2>{{user.name}}'s Notelist</h2>
+
+</div>
+<div>
+    <form action='/user'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for notel in notelist%}
+                <tr>
+                    <th>{{notel.course_name}}</th>
+                    <th>{{notel.instructor}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            <thead>
+                <tr>
+                    <th>Course_id(流水號）</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for note in notes%}
+                <tr>
+                    <th>{{note.course_id}}</th>
+                    <th><a href="/{{note.id}}">{{note.title}}</a></th>
+                    <th><a href="/{{note.id}}/delete">Delete</a></th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+
+
+</div>
+{% endblock %}
