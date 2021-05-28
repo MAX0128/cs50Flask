@@ -20,16 +20,69 @@ body{
 
 /* create_fail*/
 
-#WarningHeadLine{
+.WarnCreateFailPageTitle{
     text-align: center;
 }
 
-#WarningText{
+.WarningText{
     text-align: center;
 }
 
-#WarningContainer{
+.WarningContainer{
     background-color: #dbc321;
 }
 
 /*create*/
+
+.CreatePageTitle{
+    text-align: center;
+}
+
+/*index*/
+
+.IndexPageTitle{
+    text-align: center;
+}
+
+.IndexSubContainer{
+    background-color: #3fc88b;
+    width: 100px;
+    height: 100px;
+    border-radius: 999em;
+    position: static;
+    display: center;
+}
+
+.IndexHeadLine{
+    text-align: center;
+}
+
+.IndexSubLine{
+    text-align: center;
+}
+
+/*Login 做出在正中間方匡 登入頁面也是*/
+
+.LoginPageTitle{
+    text-align: center;   
+}
+
+.LoginPageGreeting{
+    text-align: center;
+}
+
+.BorderFunctionContainer{
+ /*做成按鈕樣式*/
+    border-style: solid;
+    border-color: #f4f4f4;
+    border-width: 3px;
+    border-radius: 5px;
+    padding: auto;
+    padding: 10px;
+}
+
+.RegisterLink{
+    text-align: center;
+    text-decoration: none;
+    color: #f4f4f4;        
+}

@@ -2,13 +2,15 @@
 {% extends "template.html" %}
 
 {% block title %}
-Login
+<p class = "LoginPageTitle">Login</p>
 {% endblock %}
 
 {% block main %}
 <div>
-    <h4>New Here?</h4>
-    <a href='/register'>Register with your NTU mail!</a>
+    <h4 class = "LoginPageGreeting">New Here?</h4>
+    <div class = "BorderFunctionContainer">
+        <a class = "RegisterLink" href='/register'>Register with your NTU mail!</a>
+    </div>
 </div>
 <form action='/login' method="POST">
     {{ form.hidden_tag() }}
