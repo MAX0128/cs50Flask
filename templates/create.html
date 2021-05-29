@@ -6,23 +6,27 @@
 
 {% block main %}
 
-<form method="POST">
-    {{ createForm.hidden_tag() }}
-    <p>
-        {{createForm.course_id.label}}
-        {{createForm.course_id()}}
-        <br>
-        {{createForm.course.label}}
-        {{createForm.course()}}
-        <br>
-        {{createForm.title.label}}
-        {{createForm.title()}}
-        <br>
-        {{createForm.notes.label}}
-        {{createForm.notes()}}
-    </p>
-    <p>
-        {{createForm.submitnote()}}
-    </p>
-</form>
+<div class = "FormContainer">
+    <form class="CreateForm" method="POST">
+      {{ createForm.hidden_tag() }}
+      <p class="AccountInput">
+          {{createForm.course_id.label}}
+          {{createForm.course_id()}}
+          <br>
+          {{createForm.course.label}}
+          {{createForm.course()}}
+          <br>
+          {{createForm.title.label}}
+          {{createForm.title()}}
+          <br>
+          {{createForm.notes.label}}
+          {{createForm.notes()}}
+      </p>
+      
+      <p>
+          {{createForm.submitnote()}}
+      </p>
+      
+  </form>
+</div>
 {% endblock %}

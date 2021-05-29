@@ -6,48 +6,53 @@ Notelist
 
 {% block main %}
 
-<div>
+<div class="UserContainer">
+    <div>
+      <h2 class="UserName">{{user.name}}'s Notelist</h2>
+    </div>
+    <div>
+      <form  class = "UserForm" action='/user'>
+        <div class="TableContainer">
+          <table class="TableLeft">
+            
+              <thead>
+                  <tr>
+                      <th>Course</th>
+                      <th>Instructor</th>
+                  </tr>
+              </thead>
+            
+            
+              <tbody>
+                  {% for notel in notelist%}
+                  <tr>
+                      <th>{{notel.course_name}}</th>
+                      <th>{{notel.instructor}}</th>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table> 
 
-    <h2>{{user.name}}'s Notelist</h2>
-
-</div>
-<div>
-    <form action='/user'>
-        <table>
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Instructor</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                {% for notel in notelist%}
-                <tr>
-                    <th>{{notel.course_name}}</th>
-                    <th>{{notel.instructor}}</th>
-                </tr>
-                {% endfor %}
-            </tbody>
-
-            <thead>
-                <tr>
-                    <th>Course_id(流水號）</th>
-                    <th>Note</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for note in notes%}
-                <tr>
-                    <th>{{note.course_id}}</th>
-                    <th><a href="/{{note.id}}">{{note.title}}</a></th>
-                    <th><a href="/{{note.id}}/delete">Delete</a></th>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </form>
-
-
+          <table class="TableRight">
+              <thead>
+                  <tr>
+                      <th>Course_id(流水號）</th>
+                      <th>Note</th>
+                  </tr>
+              </thead>
+          
+              <tbody>
+                  {% for note in notes%}
+                  <tr>
+                      <th>{{note.course_id}}</th>
+                      <th><a href="/{{note.id}}">{{note.title}}</a></th>
+                      <th><a href="/{{note.id}}/delete" id="Delete">Delete</a></th>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+        </div>  
+      </form>
+  </div>
 </div>
 {% endblock %}

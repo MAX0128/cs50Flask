@@ -5,6 +5,8 @@ Note of {{user.name}}
 {% endblock %}
 
 {% block main %}
-<h3>{{text.title}}</h3>
-<p>{{text.notes}}</p>
+<div class="NoteContainer">
+    <h3>{{text.title}}</h3>
+    <p id = "TextNote">{{text.notes}}</p>
+</div>
 {% endblock %}

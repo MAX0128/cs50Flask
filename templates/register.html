@@ -6,24 +6,26 @@ Register
 
 {% block main %}
 
-<form method="POST">
-    {{ form.hidden_tag() }}
-    <p>
-        {{form.user.label}}
-        {{form.user()}}
-        <br>
-        {{form.password.label}}
-        {{form.password()}}
-        <br>
-        {{form.passconfirm.label}}
-        {{form.passconfirm()}}
-        <br>
-        {{form.email.label}}
-        {{form.email()}}
-    </p>
-    <p>
-        {{form.submit()}}
-
-    </p>
-</form>
+<div class="RegisterContainer">
+    <form method="POST" class="RegisterForm">
+      {{ form.hidden_tag() }}
+      <p>
+          {{form.user.label}}
+          {{form.user()}}
+          <br>
+          {{form.password.label}}
+          {{form.password()}}
+          <br>
+          {{form.passconfirm.label}}
+          {{form.passconfirm()}}
+          <br>
+          {{form.email.label}}
+          {{form.email()}}
+      </p>
+      <p>
+          {{form.submit()}}
+  
+      </p>
+    </form>
+  </div>
 {% endblock %}

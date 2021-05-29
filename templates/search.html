@@ -5,41 +5,43 @@ Search for notes!
 {% endblock %}
 
 {% block main %}
-<form method="POST">
-    {{ formCourse.hidden_tag() }}
-    <p>
-        {{formCourse.course.label}}
-        {{formCourse.course()}}
-        {{formCourse.submit()}}
+<div class="SearchContainer">
+    <form method="POST" class="SearchTable">
+      {{ formCourse.hidden_tag() }}
+      <p>
+          {{formCourse.course.label}}
+          {{formCourse.course()}}
+          {{formCourse.submit()}}
 
-    </p>
-</form>
-
-{% if note_course %}
-<form action='/search'>
-    <table>
-        <thead>
-            <tr>
-                <th>Course</th>
-                <th>Instructor</th>
-                <th>Note</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            {% for course in note_course%}
-            {% for note in course.notes %}
-            <tr>
-                <th>{{course.course_name}}</th>
-                <th>{{course.instructor}}</th>
-                <th><a href="/{{note.id}}">{{note.title}}</a></th>
-            </tr>
-            {% endfor %}
-            {% endfor %}
-
-        </tbody>
-    </table>
-</form>
+      </p>
+  </form>
+  
+  {% if note_course %}
+  <form action='/search' class="SearchResult">
+      <table class="SearchResultTable">
+          <thead>
+              <tr>
+                  <th>Course</th>
+                  <th>Instructor</th>
+                  <th>Note</th>
+              </tr>
+          </thead>
+  
+          <tbody>
+              {% for course in note_course%}
+              {% for note in course.notes %}
+              <tr>
+                  <th>{{course.course_name}}</th>
+                  <th>{{course.instructor}}</th>
+                  <th><a href="/{{note.id}}">{{note.title}}</a></th>
+              </tr>
+              {% endfor %}
+              {% endfor %}
+  
+          </tbody>
+      </table>
+  </form>
+</div>
 {% endif %}
 
 {% endblock %}

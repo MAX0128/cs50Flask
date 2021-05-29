@@ -12,10 +12,23 @@ body{
     font-family: Roboto Slab;
 }
 
+nav{
+    padding: auto;
+    margin: 0px;
+}
+
+.container-fluid{
+    padding: 20px;
+}
 
 #navbarSupportedContent{
     position: absolute;
     right: 2%;
+}
+
+.footer{
+    padding:0%;
+    border-style: none;
 }
 
 /* create_fail*/
@@ -24,12 +37,30 @@ body{
     text-align: center;
 }
 
-.WarningText{
+.WarningTextFirst{
     text-align: center;
+    padding-top: 15%;
+}
+
+.WarningTextSecond{
+    text-align: center;
+    
 }
 
 .WarningContainer{
-    background-color: #dbc321;
+    background-color: #fef105;
+    height: 70%;
+    width: 33%;
+    margin-left: 33%;
+    border-radius: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.WarningPic{
+    padding-left: 45px;
+    padding-top: 20px;
+    opacity: 0.95;
 }
 
 /*create*/
@@ -38,19 +69,60 @@ body{
     text-align: center;
 }
 
+.CreateForm{
+    text-align: center;
+}
+
+.FormContainer{
+    height: 70%;
+    width: 33%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 33%;
+    padding-top: 10%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
+
+.AccountInput{
+    text-align: center;
+}
+
+
 /*index*/
 
 .IndexPageTitle{
     text-align: center;
 }
 
+.BackgroundPics{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+}
+
+.BackgroundPics img{
+    height: 100%;
+    width: 100%;
+}
+
 .IndexSubContainer{
-    background-color: #3fc88b;
-    width: 100px;
-    height: 100px;
+    background-color: hsla(170, 100%, 50%, 0.5);
+    width: 500px;
+    height: 500px;
+    position: relative;
     border-radius: 999em;
-    position: static;
-    display: center;
+    margin: 33%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .IndexHeadLine{
@@ -59,9 +131,24 @@ body{
 
 .IndexSubLine{
     text-align: center;
+    margin-left: 9%;
 }
 
 /*Login 做出在正中間方匡 登入頁面也是*/
+
+.LoginContainer{
+    height: 70%;
+    width: 33%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 33%;
+    padding-top: 5%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
 
 .LoginPageTitle{
     text-align: center;   
@@ -79,10 +166,146 @@ body{
     border-radius: 5px;
     padding: auto;
     padding: 10px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .RegisterLink{
     text-align: center;
     text-decoration: none;
     color: #f4f4f4;        
+}
+
+.LoginFormContainer{
+    text-align: center;
+}
+
+
+/*note*/
+
+.NoteContainer{
+    height: 70%;
+    width: 33%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 33%;
+    padding-top: 5%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#TextNote{
+    text-align: center;
+}
+
+/*register*/
+
+.RegisterContainer{
+    height: 70%;
+    width: 33%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 33%;
+    padding-top: 10%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
+
+.RegisterForm{
+    text-align: center;
+}
+
+/*search*/
+
+.SearchContainer{
+    height: 70%;
+    width: 70%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    padding-top: 5%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
+
+.SearchTable{
+    text-align: center;
+}
+
+.SearchResult{
+    text-align: center;
+}
+
+.SearchResultTable{
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+/*user*/
+
+.UserContainer{
+    height: 70%;
+    width: 70%;
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #f4f4f4;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    padding-top: 5%;
+    border-width: 15px;
+    background-color: #c0cdc9;
+}
+
+.UserName{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.UserForm{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.TableContainer{
+    text-align: center;
+}
+
+.TableLeft{
+    float: left;
+    display: inline;
+    margin: 30px;
+    padding: 10px;
+}
+
+.TableRight{
+    float: left;
+    display: inline ;
+    margin: 30px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#Delete{
+    margin-left: 10px;
 }

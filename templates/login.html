@@ -6,26 +6,28 @@
 {% endblock %}
 
 {% block main %}
-<div>
-    <h4 class = "LoginPageGreeting">New Here?</h4>
-    <div class = "BorderFunctionContainer">
-        <a class = "RegisterLink" href='/register'>Register with your NTU mail!</a>
-    </div>
-</div>
-<form action='/login' method="POST">
-    {{ form.hidden_tag() }}
-    <p>
-        {{form.userlog.label}}
-        {{form.userlog()}}
-        <br>
-        {{form.passwordlog.label}}
-        {{form.passwordlog()}}
-
-    </p>
-    <p>
-        {{form.remember.label}}
-        {{form.remember()}}
-        {{form.submitlog()}}
-    </p>
-</form>
+<div class="LoginContainer">
+    <div>
+      <h4 class = "LoginPageGreeting">New Here?</h4>
+      <div class = "BorderFunctionContainer">
+          <a class = "RegisterLink" href='/register'>Register with your NTU mail!</a>
+      </div>
+  </div>
+  <form action='/login' method="POST" class="LoginFormContainer">
+      {{ form.hidden_tag() }}
+      <p>
+          {{form.userlog.label}}
+          {{form.userlog()}}
+          <br>
+          {{form.passwordlog.label}}
+          {{form.passwordlog()}}
+  
+      </p>
+      <p>
+          {{form.remember.label}}
+          {{form.remember()}}
+          {{form.submitlog()}}
+      </p>
+  </form>
+  </div>
 {% endblock %}
